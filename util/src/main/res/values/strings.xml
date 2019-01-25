@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Util</string>
+
+    <string name="empty_phoneNumber">شماره معتبری وارد کنید</string>
+    <string name="length_not_equal_11">شماره همراه باید 11 رقمی باشد</string>
+    <string name="start_with_09">شماره همراه باید با 09 شروع شود</string>
+
+</resources>

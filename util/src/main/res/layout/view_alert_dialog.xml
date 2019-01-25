@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafafa"
+    android:layoutDirection="ltr"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:background="#FFC107"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="4dp" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:background="#eee"
+        android:layout_alignTop="@id/title"
+        android:layout_alignBottom="@id/title"
+        android:id="@+id/titleIcon"
+        android:padding="12dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/ic_donut_large_black_24dp"
+        android:layout_width="56dp"
+        android:layout_height="56dp" />
+
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        android:background="#eee"
+        android:layout_toLeftOf="@id/titleIcon"
+        android:id="@+id/title"
+        android:gravity="center_vertical|right"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        tools:text="لورم ایپسوم"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:background="#ddd"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/message"
+            android:gravity="right"
+            android:padding="16dp"
+            tools:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:foreground="?android:selectableItemBackground"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/negativeParent"
+                android:background="@drawable/background_dialog_negative_button"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/negative"
+                    android:layout_marginLeft="8dp"
+                    android:text="بیخیال"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_marginRight="4dp"
+                    android:tint="@android:color/white"
+                    android:padding="2dp"
+                    android:id="@+id/positiveIcon"
+                    android:layout_gravity="right|center_vertical"
+                    app:srcCompat="@drawable/ic_close_black_24dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/positiveParent"
+                android:background="@drawable/background_dialog_positive_button"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/positive"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="بله"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_marginRight="4dp"
+                    android:tint="@android:color/white"
+                    android:padding="2dp"
+                    android:id="@+id/negativeIcon"
+                    android:layout_gravity="center_vertical|right"
+                    app:srcCompat="@drawable/ic_done_black_24dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

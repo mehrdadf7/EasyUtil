@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.mehrdadf7.util">
+
+    <application
+        android:name=".Application" />
+
+</manifest>
