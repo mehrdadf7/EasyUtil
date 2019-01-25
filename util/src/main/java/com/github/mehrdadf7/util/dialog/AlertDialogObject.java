@@ -1,7 +1,9 @@
-package com.github.mehrdadf7.util;
+package com.github.mehrdadf7.util.dialog;
 
 import android.graphics.Color;
 import android.view.Gravity;
+
+import com.github.mehrdadf7.util.R;
 
 public class AlertDialogObject {
 

@@ -1,4 +1,4 @@
-package com.github.mehrdadf7.util;
+package com.github.mehrdadf7.util.dialog;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -9,6 +9,8 @@ import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.github.mehrdadf7.util.R;
 
 public class CustomDialog extends AlertDialog implements View.OnClickListener {
 

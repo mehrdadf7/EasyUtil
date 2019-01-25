@@ -1,4 +1,4 @@
-package com.github.mehrdadf7.util;
+package com.github.mehrdadf7.util.pagination;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;

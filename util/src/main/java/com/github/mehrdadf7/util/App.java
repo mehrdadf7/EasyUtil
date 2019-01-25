@@ -7,8 +7,10 @@ import android.os.Build;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.internal.view.SupportMenu;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +60,36 @@ public class App {
         toast.setGravity(80, 0, 100);
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    public static boolean checkPhoneNumber(Typeface typeface, int colorPrimary, int colorPrimaryDark, AppCompatEditText editText) {
+        if (editText.getText() != null) {
+            if (editText.getText().toString().trim().isEmpty()) {
+                App.t(Application.getContext().getString(R.string.empty_phoneNumber), typeface, colorPrimary, colorPrimaryDark);
+                return false;
+            } else if (!editText.getText().toString().trim().startsWith("09")) {
+                App.t(Application.getContext().getString(R.string.length_not_equal_11), typeface, colorPrimary, colorPrimaryDark);
+                return false;
+            } else if (editText.getText().toString().trim().length() != 11) {
+                App.t(Application.getContext().getString(R.string.start_with_09), typeface, colorPrimary, colorPrimaryDark);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean checkPhoneNumber(Typeface typeface, int colorPrimary, int colorPrimaryDark, EditText editText) {
+        if (editText.getText().toString().trim().isEmpty()) {
+            App.t(Application.getContext().getString(R.string.empty_phoneNumber), typeface, colorPrimary, colorPrimaryDark);
+            return false;
+        } else if (!editText.getText().toString().trim().startsWith("09")) {
+            App.t(Application.getContext().getString(R.string.length_not_equal_11), typeface, colorPrimary, colorPrimaryDark);
+            return false;
+        } else if (editText.getText().toString().trim().length() != 11) {
+            App.t(Application.getContext().getString(R.string.start_with_09), typeface, colorPrimary, colorPrimaryDark);
+            return false;
+        }
+        return true;
     }
 
     public static void gone(View view) {
