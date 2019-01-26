@@ -9,7 +9,6 @@ implementation 'github.mehrdadf7:util:1.0.3'
 ```
 
 ## options
-### App class includes static methods: 
     .Check PhoneNumber
     .EasyLog by TAG "log"
     .Gradient Toast
