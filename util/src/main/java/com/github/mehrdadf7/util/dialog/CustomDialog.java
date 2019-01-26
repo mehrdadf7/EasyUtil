@@ -21,7 +21,7 @@ public class CustomDialog extends AlertDialog implements View.OnClickListener {
 
     public CustomDialog(@NonNull Context context, AlertDialogObject object) {
         super(context);
-        this.object   = object;
+        this.object = object;
     }
 
     @Override
