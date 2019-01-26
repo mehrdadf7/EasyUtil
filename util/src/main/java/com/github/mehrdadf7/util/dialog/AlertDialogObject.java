@@ -1,6 +1,7 @@
 package com.github.mehrdadf7.util.dialog;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.Gravity;
 
 import com.github.mehrdadf7.util.R;
@@ -28,6 +29,38 @@ public class AlertDialogObject {
 
     private int gravityTitle = Gravity.RIGHT;
     private int gravityMessage = Gravity.RIGHT;
+
+    private boolean isPositiveShow = false;
+    private boolean isNegativeShow = false;
+
+    private Typeface typeface;
+
+    public AlertDialogObject setTypeface(Typeface typeface) {
+        this.typeface = typeface;
+        return this;
+    }
+
+    public Typeface getTypeface() {
+        return typeface;
+    }
+
+    public boolean isPositiveShow() {
+        return isPositiveShow;
+    }
+
+    public AlertDialogObject setPositiveShow(boolean positiveShow) {
+        isPositiveShow = positiveShow;
+        return this;
+    }
+
+    public boolean isNegativeShow() {
+        return isNegativeShow;
+    }
+
+    public AlertDialogObject setNegativeShow(boolean negativeShow) {
+        isNegativeShow = negativeShow;
+        return this;
+    }
 
     public int getTitleBackground() {
         return titleBackground;

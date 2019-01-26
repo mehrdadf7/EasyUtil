@@ -14,7 +14,6 @@ import com.github.mehrdadf7.util.R;
 
 public class CustomDialog extends AlertDialog implements View.OnClickListener {
 
-    private Typeface typeface;
     private AlertDialogObject object;
     private TextView title, message, positive, negative;
     private LinearLayout positiveParent, negativeParent;
@@ -23,11 +22,6 @@ public class CustomDialog extends AlertDialog implements View.OnClickListener {
     public CustomDialog(@NonNull Context context, AlertDialogObject object) {
         super(context);
         this.object   = object;
-    }
-    public CustomDialog(@NonNull Context context, AlertDialogObject object, Typeface typeface) {
-        super(context);
-        this.object   = object;
-        this.typeface = typeface;
     }
 
     @Override
@@ -54,10 +48,10 @@ public class CustomDialog extends AlertDialog implements View.OnClickListener {
 
         titleIcon.setImageResource(object.getTitleIcon());
 
-        title   .setTypeface(typeface);
-        message .setTypeface(typeface);
-        positive.setTypeface(typeface);
-        negative.setTypeface(typeface);
+        title   .setTypeface(object.getTypeface());
+        message .setTypeface(object.getTypeface());
+        positive.setTypeface(object.getTypeface());
+        negative.setTypeface(object.getTypeface());
 
         title    .setBackgroundColor(object.getTitleBackground());
         titleIcon.setBackgroundColor(object.getTitleBackground());
@@ -70,6 +64,9 @@ public class CustomDialog extends AlertDialog implements View.OnClickListener {
 
         positive.setText(object.getPositive());
         negative.setText(object.getNegative());
+
+        positiveParent.setVisibility(object.isPositiveShow() ? View.VISIBLE : View.GONE);
+        negativeParent.setVisibility(object.isNegativeShow() ? View.VISIBLE : View.GONE);
 
         positiveIcon.setImageResource(object.getNegativeIcon());
         negativeIcon.setImageResource(object.getPositiveIcon());
