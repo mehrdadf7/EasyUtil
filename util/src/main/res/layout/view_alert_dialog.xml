@@ -118,7 +118,6 @@
                     android:layout_gravity="center_vertical"
                     android:id="@+id/positive"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
                     android:text="بله"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
