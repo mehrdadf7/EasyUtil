@@ -48,7 +48,7 @@ artifacts {
     archives generateSourcesJar
 }
 
-version = "1.0.2"
+version = "1.0.4"
 group = 'github.mehrdadf7'
 
 bintray {
@@ -60,10 +60,10 @@ bintray {
         name = 'EasyUtil'
 
         version {
-            name = '1.0.2'
+            name = '1.0.4'
             desc = 'Android Easy Util'
             released = new Date()
-            vcsTag = '1.0.2'
+            vcsTag = '1.0.4'
         }
 
         licenses = ['Apache-2.0']

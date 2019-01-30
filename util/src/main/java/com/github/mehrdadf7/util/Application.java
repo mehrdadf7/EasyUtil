@@ -2,7 +2,7 @@ package com.github.mehrdadf7.util;
 
 import android.content.Context;
 
-class Application extends android.app.Application {
+public class Application extends android.app.Application {
 
     private static Context context;
 

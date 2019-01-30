@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/samim.ttf");
-
         final AlertDialogObject object = new AlertDialogObject()
                 .setTitle("لورم ایپسوم")
                 .setMessage("لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی ...")
